@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Molecula — AI Creative Production Operating System",
+    "description": "Molecula is a connected creative production platform for AI images, video, film, music, voice, scripts, characters, and worlds — taking a project from idea to finished export in one place."
+  },
+  "header": {
+    "brand": "Molecula",
+    "primaryCta": "Start Creating",
+    "secondaryCta": "Explore Molecula"
+  },
+  "hero": {
+    "eyebrow": "AI Creative Production Operating System",
+    "headline": "Create. Direct. Produce.",
+    "subhead": "Molecula is a connected creative production platform for producing images, video, film, music, voice, characters, and worlds — as one continuous project, not a pile of disconnected tools.",
+    "primaryCta": "Start Creating",
+    "secondaryCta": "Explore Molecula"
+  },
+  "philosophy": {
+    "eyebrow": "How Molecula thinks",
+    "heading": "Project first. Tools second.",
+    "body": "Most AI tools generate an asset and stop. Molecula produces a project — carrying continuity, characters, and creative direction across every stage, from the first idea to the final export."
+  },
+  "pipeline": {
+    "heading": "One project, every discipline",
+    "description": "A single Molecula project moves through a connected production pipeline, the way a real studio does — not as isolated generations.",
+    "steps": [
+      "Idea",
+      "Script",
+      "Characters",
+      "Visual Direction",
+      "Storyboard",
+      "Scenes",
+      "3D / Previs",
+      "Video",
+      "Voice",
+      "Music & SFX",
+      "Auto Edit",
+      "Localization",
+      "Export"
+    ]
+  },
+  "disciplines": {
+    "heading": "Built for every creative discipline",
+    "items": [
+      {
+        "name": "Image",
+        "description": "Direction-aware image generation for stills, keyframes, and concept art."
+      },
+      {
+        "name": "Video",
+        "description": "Shot-level AI video production with continuity across scenes."
+      },
+      {
+        "name": "Film",
+        "description": "Full movie projects — script to screen, one production timeline."
+      },
+      {
+        "name": "Music",
+        "description": "Original score and sound design generated for the scene, not the loop."
+      },
+      {
+        "name": "Voice",
+        "description": "Character-consistent AI voice across languages and takes."
+      },
+      {
+        "name": "Script",
+        "description": "AI-assisted scriptwriting tied directly to characters and scenes."
+      },
+      {
+        "name": "Characters",
+        "description": "Persistent characters carried across every scene and medium."
+      },
+      {
+        "name": "Storyboard",
+        "description": "Auto-generated storyboards from script and visual direction."
+      },
+      {
+        "name": "3D & Previs",
+        "description": "Environments and previsualization for spatial, physical scenes."
+      },
+      {
+        "name": "Auto Director",
+        "description": "AI direction that keeps shots, pacing, and coverage intentional."
+      },
+      {
+        "name": "Continuity AI",
+        "description": "Automatic continuity checking across characters, scenes, and takes."
+      },
+      {
+        "name": "Auto Editing",
+        "description": "Assembly-first editing that respects the project's direction."
+      }
+    ]
+  },
+  "footer": {
+    "brand": "Molecula",
+    "tagline": "AI Creative Production Operating System",
+    "rights": "© {year} Molecula. All rights reserved."
+  }
+}

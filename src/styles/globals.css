@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/*
+ * MOLECULA design tokens.
+ * Dark is the default, first-class theme (obsidian / graphite / ivory ink,
+ * champagne gold used sparingly as accent). Light is a fully supported
+ * secondary theme for future use. See docs/DESIGN_SYSTEM.md.
+ */
+
+:root {
+  color-scheme: light;
+  --radius: 0.75rem;
+
+  /* Light theme — soft ivory & warm charcoal */
+  --background: oklch(97% 0.008 95);
+  --foreground: oklch(22% 0.012 60);
+
+  --surface: oklch(98.5% 0.005 95);
+  --surface-raised: oklch(100% 0 0);
+  --surface-overlay: oklch(100% 0 0 / 92%);
+
+  --muted: oklch(93% 0.01 85);
+  --muted-foreground: oklch(46% 0.012 60);
+
+  --border: oklch(88% 0.01 85);
+  --border-strong: oklch(78% 0.012 85);
+
+  --primary: oklch(20% 0.012 60);
+  --primary-foreground: oklch(98% 0.008 95);
+
+  --accent: oklch(80% 0.09 86);
+  --accent-foreground: oklch(18% 0.02 70);
+
+  --success: oklch(64% 0.14 150);
+  --warning: oklch(76% 0.13 80);
+  --danger: oklch(56% 0.19 25);
+
+  --focus-ring: oklch(64% 0.11 300);
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Dark theme (default) — obsidian, graphite, ivory ink, champagne accent */
+  --background: oklch(14% 0.01 260);
+  --foreground: oklch(95% 0.008 95);
+
+  --surface: oklch(17% 0.012 260);
+  --surface-raised: oklch(20% 0.014 260);
+  --surface-overlay: oklch(15% 0.012 260 / 88%);
+
+  --muted: oklch(23% 0.012 260);
+  --muted-foreground: oklch(66% 0.012 90);
+
+  --border: oklch(27% 0.012 260);
+  --border-strong: oklch(35% 0.014 260);
+
+  --primary: oklch(95% 0.008 95);
+  --primary-foreground: oklch(15% 0.012 260);
+
+  --accent: oklch(80% 0.09 86);
+  --accent-foreground: oklch(16% 0.02 70);
+
+  --success: oklch(70% 0.14 150);
+  --warning: oklch(80% 0.12 80);
+  --danger: oklch(63% 0.18 25);
+
+  --focus-ring: oklch(70% 0.11 300);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-overlay: var(--surface-overlay);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --color-focus-ring: var(--focus-ring);
+
+  --radius-sm: calc(var(--radius) - 0.375rem);
+  --radius-md: calc(var(--radius) - 0.125rem);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 0.5rem);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: var(--color-focus-ring);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
