@@ -125,6 +125,20 @@
   }
 }
 
+@keyframes molecule-pulse {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-molecule-pulse {
+  animation: molecule-pulse 6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

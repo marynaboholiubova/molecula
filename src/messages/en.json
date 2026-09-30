@@ -1,100 +1,872 @@
 {
   "metadata": {
+    "brand": "Molecula",
     "title": "Molecula — AI Creative Production Operating System",
     "description": "Molecula is a connected creative production platform for AI images, video, film, music, voice, scripts, characters, and worlds — taking a project from idea to finished export in one place."
   },
-  "header": {
+  "navigation": {
     "brand": "Molecula",
-    "primaryCta": "Start Creating",
-    "secondaryCta": "Explore Molecula"
+    "primaryLabel": "Primary",
+    "explore": "Explore Molecula",
+    "platform": "Platform",
+    "features": "Features",
+    "movieProject": "Movie Project",
+    "studios": "Studios",
+    "useCases": "Use Cases",
+    "templates": "Templates",
+    "pricing": "Pricing",
+    "security": "Security",
+    "about": "About",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenuLabel": "Mobile navigation"
   },
-  "hero": {
-    "eyebrow": "AI Creative Production Operating System",
-    "headline": "Create. Direct. Produce.",
-    "subhead": "Molecula is a connected creative production platform for producing images, video, film, music, voice, characters, and worlds — as one continuous project, not a pile of disconnected tools.",
-    "primaryCta": "Start Creating",
-    "secondaryCta": "Explore Molecula"
+  "footer": {
+    "statement": "One connected system for AI creative production — from first idea to finished export.",
+    "navigationLabel": "Footer",
+    "tagline": "AI Creative Production Operating System",
+    "rights": "© {year} Molecula. All rights reserved."
   },
-  "philosophy": {
-    "eyebrow": "How Molecula thinks",
-    "heading": "Project first. Tools second.",
-    "body": "Most AI tools generate an asset and stop. Molecula produces a project — carrying continuity, characters, and creative direction across every stage, from the first idea to the final export."
+  "common": {
+    "skipToContent": "Skip to content",
+    "cta": {
+      "platform": "Explore Molecula",
+      "movieProject": "Discover Movie Project",
+      "pricing": "View Pricing"
+    }
   },
-  "pipeline": {
-    "heading": "One project, every discipline",
-    "description": "A single Molecula project moves through a connected production pipeline, the way a real studio does — not as isolated generations.",
-    "steps": [
-      "Idea",
-      "Script",
-      "Characters",
-      "Visual Direction",
-      "Storyboard",
-      "Scenes",
-      "3D / Previs",
-      "Video",
-      "Voice",
-      "Music & SFX",
-      "Auto Edit",
-      "Localization",
-      "Export"
-    ]
+  "home": {
+    "hero": {
+      "eyebrow": "AI Creative Production Operating System",
+      "headline": ["Create.", "Direct. Produce."],
+      "subhead": "Molecula is a connected creative production platform for producing images, video, film, music, voice, characters, and worlds — as one continuous project, not a pile of disconnected tools.",
+      "primaryCta": "Explore Molecula",
+      "secondaryCta": "Discover Movie Project",
+      "visual": {
+        "ariaLabel": "Molecula's connected production system: Idea at the center, linked to Image, Video, Film, Music, Voice, and 3D.",
+        "center": "Idea",
+        "nodes": ["Image", "Video", "Film", "Music", "Voice", "3D"]
+      }
+    },
+    "positioning": {
+      "eyebrow": "Not another AI generator",
+      "statement": "Molecula doesn't generate isolated assets. It produces one connected project.",
+      "body": "Every stage — script, characters, visuals, sound, edit — stays linked to the same creative direction, so nothing has to be reinvented scene to scene, asset to asset."
+    },
+    "productSystem": {
+      "eyebrow": "The Product System",
+      "heading": "One idea, carried through every layer",
+      "description": "A Molecula project starts as a single idea and branches through direction and DNA into every medium it needs — without losing the thread back to where it started.",
+      "tiers": [
+        { "items": ["Idea"], "emphasis": "primary" },
+        { "items": ["Creative Director"], "emphasis": "accent" },
+        { "items": ["Project DNA"], "emphasis": "accent" },
+        {
+          "items": [
+            "Visual DNA",
+            "Character DNA",
+            "Product DNA",
+            "Brand DNA",
+            "Sound DNA"
+          ]
+        },
+        { "items": ["Image", "Video", "3D", "Voice", "Music"] },
+        { "items": ["Auto Director"], "emphasis": "accent" },
+        { "items": ["Continuity AI"], "emphasis": "accent" },
+        { "items": ["Auto Edit"], "emphasis": "accent" },
+        { "items": ["Finished Content"], "emphasis": "primary" }
+      ]
+    },
+    "movieProjectTeaser": {
+      "eyebrow": "Flagship Product",
+      "heading": "Movie Project",
+      "cta": "Enter Movie Project",
+      "steps": [
+        "Idea",
+        "Script",
+        "Characters",
+        "Storyboard",
+        "Shots",
+        "Continuity",
+        "Auto Edit",
+        "Export"
+      ]
+    },
+    "connectedStudios": {
+      "eyebrow": "Connected Studios",
+      "heading": "Five specialist studios. One shared creative brain.",
+      "description": "Image, Video, Music, Voice, and 3D each get a dedicated studio — but every one of them reads from the same project direction, characters, and continuity.",
+      "examples": [
+        {
+          "studio": "Image",
+          "example": "A keyframe generated from the project's own Visual DNA and character references."
+        },
+        {
+          "studio": "Video",
+          "example": "A shot rendered with the continuity already locked in from earlier scenes."
+        },
+        {
+          "studio": "Music",
+          "example": "A score cue written to the scene's pacing and mood, not a generic loop."
+        },
+        {
+          "studio": "Voice",
+          "example": "A character's voice held consistent across every take and language."
+        },
+        {
+          "studio": "3D",
+          "example": "A previs environment reused as the lighting reference for the final shot."
+        }
+      ]
+    },
+    "continuity": {
+      "eyebrow": "Continuity AI",
+      "heading": "Every asset checked against what came before it",
+      "description": "Continuity AI compares each new generation against the project's established characters, environments, and direction — flagging drift before it reaches the final edit.",
+      "dimensions": [
+        "Characters",
+        "Wardrobe",
+        "Environments",
+        "Lighting",
+        "Props",
+        "Voice"
+      ],
+      "rows": [
+        { "label": "Character", "status": "match", "statusLabel": "Matched" },
+        { "label": "Wardrobe", "status": "match", "statusLabel": "Matched" },
+        {
+          "label": "Environment",
+          "status": "review",
+          "statusLabel": "Needs Review"
+        },
+        { "label": "Lighting", "status": "locked", "statusLabel": "Locked" }
+      ]
+    },
+    "autoDirector": {
+      "eyebrow": "Auto Director",
+      "heading": "AI direction that keeps shots intentional",
+      "description": "Auto Director proposes shot coverage, pacing, and framing from the scene's script and Visual DNA — a starting cut a human director refines, not a black box.",
+      "notes": [
+        "Establishing wide — sets the space before any character enters.",
+        "Coverage shifts to a medium two-shot as the dialogue starts.",
+        "Cut to a close-up on the reaction beat, held for pacing.",
+        "Return to the wide to close the scene on the same axis it opened."
+      ]
+    },
+    "autoEdit": {
+      "eyebrow": "Auto Edit",
+      "heading": "Assembly-first editing, built on the project's own direction",
+      "description": "Auto Edit assembles video, voice, and music into a synchronized first cut — respecting the pacing Auto Director already set, not guessing at it from scratch.",
+      "tracks": [
+        { "label": "Video", "segments": [3, 2, 4, 2, 3] },
+        { "label": "Voice", "segments": [2, 4, 1, 3, 2] },
+        { "label": "Music", "segments": [4, 1, 3, 1, 3] }
+      ],
+      "capabilities": [
+        "Cuts synced to dialogue and music beats",
+        "Automatic pacing from the Auto Director shot list",
+        "Multi-track assembly across video, voice, and music",
+        "A first cut ready for human refinement, not a final export"
+      ]
+    },
+    "projectTypes": {
+      "eyebrow": "Project Types",
+      "heading": "Built for every kind of production",
+      "items": [
+        {
+          "name": "Movie Project",
+          "description": "A full film production — script to screen, one connected timeline."
+        },
+        {
+          "name": "Brand Campaign",
+          "description": "Coordinated visuals and video across a single campaign direction."
+        },
+        {
+          "name": "Music Video",
+          "description": "Performance and narrative footage built to the track's own structure."
+        },
+        {
+          "name": "Product Launch",
+          "description": "Consistent product imagery and video across every format."
+        },
+        {
+          "name": "Fashion Editorial",
+          "description": "Editorial stills and motion carrying one visual direction."
+        },
+        {
+          "name": "YouTube Series",
+          "description": "Recurring characters and settings kept consistent episode to episode."
+        },
+        {
+          "name": "Cartoon",
+          "description": "Stylized characters and worlds carried across every scene."
+        },
+        {
+          "name": "Social Content",
+          "description": "Short-form video produced from the same project direction, at scale."
+        }
+      ]
+    },
+    "quality": {
+      "eyebrow": "The Quality Engine",
+      "heading": "Direction-checked at every stage, not just at export",
+      "description": "Quality isn't a final filter — it's enforced at each stage of the pipeline, from the first generation to the finished cut.",
+      "stages": [
+        "Direction",
+        "Generation",
+        "Continuity Check",
+        "Assembly",
+        "Final Review"
+      ],
+      "principles": [
+        "Direction-aware generation",
+        "Continuity checked, not assumed",
+        "Human review before export",
+        "No disconnected one-off assets"
+      ]
+    },
+    "finalCta": {
+      "headingLine1": "One project.",
+      "headingLine2": "Every discipline.",
+      "primaryCta": "Explore Molecula",
+      "secondaryCta": "View Pricing"
+    }
   },
-  "disciplines": {
-    "heading": "Built for every creative discipline",
+  "features": {
+    "meta": {
+      "title": "Features",
+      "description": "Every Molecula capability, grouped by what it's for — creating, directing, producing, and the DNA system connecting them."
+    },
+    "hero": {
+      "eyebrow": "The Platform",
+      "heading": "Everything a connected production needs",
+      "description": "Molecula's capabilities aren't isolated tools. They're grouped by what they do for the project — creating, directing, producing — all built on the same DNA system."
+    },
+    "groups": {
+      "create": {
+        "title": "Create",
+        "description": "Generate every core medium a project needs, all aware of the same direction.",
+        "items": [
+          { "name": "Image" },
+          { "name": "Video" },
+          { "name": "Music" },
+          { "name": "Voice" },
+          { "name": "3D" }
+        ]
+      },
+      "direct": {
+        "title": "Direct",
+        "description": "Shape the project's story, characters, and shots before a single frame is rendered.",
+        "items": [
+          {
+            "name": "Creative Director",
+            "description": "Sets and enforces the project's direction across every stage."
+          },
+          {
+            "name": "Scriptwriter",
+            "description": "AI-assisted screenwriting tied directly to characters and scenes."
+          },
+          {
+            "name": "Character Studio",
+            "description": "Builds persistent characters carried across every scene and medium."
+          },
+          {
+            "name": "Storyboard",
+            "description": "Auto-generated storyboards from script and visual direction."
+          },
+          {
+            "name": "Scene Builder",
+            "description": "Assembles scenes from characters, environments, and shot lists."
+          },
+          {
+            "name": "Auto Director",
+            "description": "Proposes shot coverage and pacing from the script and Visual DNA."
+          }
+        ]
+      },
+      "produce": {
+        "title": "Produce",
+        "description": "Turn directed scenes into a finished, continuity-checked export.",
+        "items": [
+          { "name": "Continuity AI" },
+          { "name": "Auto Edit" },
+          { "name": "Localization" },
+          { "name": "Export" }
+        ]
+      },
+      "system": {
+        "title": "System",
+        "description": "The DNA layer every generation reads from, so nothing drifts from the project's direction.",
+        "items": [
+          {
+            "name": "Project DNA",
+            "description": "The project's core direction — tone, story, and creative intent."
+          },
+          {
+            "name": "Brand DNA",
+            "description": "Brand guidelines carried automatically into every generated asset."
+          },
+          {
+            "name": "Visual DNA",
+            "description": "The project's visual language — style, palette, and composition."
+          },
+          {
+            "name": "Character DNA",
+            "description": "Persistent character identity across every shot and medium."
+          },
+          {
+            "name": "Product DNA",
+            "description": "Consistent product representation across campaigns and formats."
+          },
+          {
+            "name": "Sound DNA",
+            "description": "A consistent sonic identity across score, voice, and sound design."
+          }
+        ]
+      }
+    },
+    "finalCta": {
+      "heading": "See it applied to a full production",
+      "description": "Movie Project shows every one of these capabilities working together, end to end."
+    }
+  },
+  "movieProject": {
+    "meta": {
+      "title": "Movie Project",
+      "description": "Molecula's flagship workflow — a full film production carried from idea to final export as one connected project."
+    },
+    "hero": {
+      "eyebrow": "Flagship Product",
+      "heading": "From idea to finished film, one connected project",
+      "description": "Movie Project is Molecula's complete production workflow — script, characters, visual direction, shots, and edit, all carried through a single continuous timeline."
+    },
+    "flow": {
+      "eyebrow": "The Full Workflow",
+      "heading": "Sixteen connected stages, one production",
+      "steps": [
+        "Idea",
+        "Script",
+        "Characters",
+        "Visual Direction",
+        "Worlds",
+        "Storyboard",
+        "Scene Builder",
+        "Shots",
+        "Takes",
+        "Continuity",
+        "Voice",
+        "Music",
+        "Auto Director",
+        "Auto Edit",
+        "Localization",
+        "Export"
+      ]
+    },
+    "workflow": {
+      "eyebrow": "Inside The Workflow",
+      "heading": "What happens at each stage",
+      "items": [
+        {
+          "title": "Idea → Screenplay",
+          "description": "A project starts as an idea and becomes a full screenplay, developed with AI assistance while staying in the writer's hands."
+        },
+        {
+          "title": "Persistent Characters",
+          "description": "Characters are built once and carried, identical, into every scene, shot, and medium they appear in."
+        },
+        {
+          "title": "Visual Direction & Worlds",
+          "description": "A visual language and set of environments are established before a single shot is generated."
+        },
+        {
+          "title": "Storyboard & Scene Architecture",
+          "description": "The script becomes a storyboard, broken into scenes and the shots each one needs."
+        },
+        {
+          "title": "Shots, Takes & Previs",
+          "description": "Each shot is previsualized in 3D and produced across multiple takes for selection."
+        },
+        {
+          "title": "Continuity AI",
+          "description": "Every take is checked against established characters, wardrobe, environments, and lighting before it moves forward."
+        },
+        {
+          "title": "Voice & Music",
+          "description": "Character voice and score are generated to match the scene's performance and pacing."
+        },
+        {
+          "title": "Auto Director",
+          "description": "Shot coverage and pacing are proposed from the script and visual direction, ready for a human director to refine."
+        },
+        {
+          "title": "Auto Edit",
+          "description": "Video, voice, and music are assembled into a synchronized first cut, built on the Auto Director's pacing."
+        },
+        {
+          "title": "Localization & Export",
+          "description": "The finished cut is localized and exported in the formats the project needs."
+        }
+      ]
+    },
+    "continuityRows": [
+      { "label": "Character", "status": "match", "statusLabel": "Matched" },
+      { "label": "Wardrobe", "status": "locked", "statusLabel": "Locked" },
+      { "label": "Environment", "status": "match", "statusLabel": "Matched" },
+      { "label": "Lighting", "status": "review", "statusLabel": "Needs Review" }
+    ],
+    "timelineTracks": [
+      { "label": "Video", "segments": [3, 2, 4, 2, 3] },
+      { "label": "Voice", "segments": [2, 4, 1, 3, 2] },
+      { "label": "Music", "segments": [4, 1, 3, 1, 3] }
+    ],
+    "finalCta": {
+      "heading": "Start with an idea. Leave with a film.",
+      "description": "Movie Project carries a single idea through every stage of production, without losing the thread."
+    }
+  },
+  "studios": {
+    "meta": {
+      "title": "Studios",
+      "description": "Five specialist AI studios — Image, Video, Music, Voice, and 3D — sharing one creative brain across every project."
+    },
+    "hero": {
+      "eyebrow": "Specialist Studios",
+      "heading": "Specialist studios. One shared creative brain.",
+      "description": "Each studio is built for its own medium — but every one of them reads from the same project direction, characters, and continuity."
+    },
+    "positioning": {
+      "eyebrow": "Why studios, not tools",
+      "statement": "A tool generates in isolation. A studio produces as part of the project.",
+      "body": "Every studio below is a specialist in its medium, but none of them work alone — each reads from the same Project DNA, so nothing has to be re-established from studio to studio."
+    },
+    "groups": {
+      "image": {
+        "title": "Image Studio",
+        "description": "Direction-aware image generation for stills, keyframes, and concept art.",
+        "items": [
+          { "name": "Prompt" },
+          { "name": "Multi-reference" },
+          { "name": "Product" },
+          { "name": "Fashion" },
+          { "name": "Editorial" },
+          { "name": "Retouch" },
+          { "name": "Color" },
+          { "name": "Upscale" }
+        ]
+      },
+      "video": {
+        "title": "Video Studio",
+        "description": "Shot-level AI video production with continuity carried across scenes.",
+        "items": [
+          { "name": "Text to Video" },
+          { "name": "Image to Video" },
+          { "name": "References" },
+          { "name": "Shots" },
+          { "name": "Takes" },
+          { "name": "Extend" },
+          { "name": "Modify" }
+        ]
+      },
+      "music": {
+        "title": "Music Studio",
+        "description": "Original score, songs, and sound design generated for the project, not a loop library.",
+        "items": [
+          { "name": "Full Song" },
+          { "name": "Instrumental" },
+          { "name": "Soundtrack" },
+          { "name": "Lyrics" },
+          { "name": "Arrangement" },
+          { "name": "Stems" },
+          { "name": "Video Sync" }
+        ]
+      },
+      "voice": {
+        "title": "Voice Studio",
+        "description": "Character-consistent AI voice across languages, takes, and formats.",
+        "items": [
+          { "name": "Text to Speech" },
+          { "name": "Character Voices" },
+          { "name": "Dubbing" },
+          { "name": "Audiobook" },
+          { "name": "Localization" }
+        ]
+      },
+      "threeD": {
+        "title": "3D Studio",
+        "description": "Environments and previsualization for spatial, physical scenes.",
+        "items": [
+          { "name": "Products" },
+          { "name": "Objects" },
+          { "name": "Environments" },
+          { "name": "Previs" },
+          { "name": "Camera Paths" },
+          { "name": "Scene Composition" }
+        ]
+      }
+    },
+    "finalCta": {
+      "heading": "See the studios working as one project",
+      "description": "Movie Project shows every studio producing from the same shared direction."
+    }
+  },
+  "useCases": {
+    "meta": {
+      "title": "Use Cases",
+      "description": "How Molecula's connected production workflow applies across fashion, advertising, film, music, and more."
+    },
+    "hero": {
+      "eyebrow": "Use Cases",
+      "heading": "One workflow, built for every kind of production",
+      "description": "The same connected production system applies whether the deliverable is a fashion campaign, a film, or a season of social content."
+    },
+    "list": {
+      "eyebrow": "By Production Type",
+      "heading": "Ten ways teams put it to work"
+    },
+    "labels": {
+      "goal": "Goal",
+      "workflow": "Workflow",
+      "studios": "Studios",
+      "deliverables": "Deliverables"
+    },
     "items": [
       {
-        "name": "Image",
-        "description": "Direction-aware image generation for stills, keyframes, and concept art."
+        "name": "Fashion",
+        "goal": "Consistent editorial and campaign imagery across a full collection.",
+        "workflow": "Visual Direction sets the collection's look; Image Studio produces editorial stills carrying it across every piece.",
+        "studios": "Image, Video",
+        "deliverables": "Editorial stills, campaign video, lookbook assets"
       },
       {
-        "name": "Video",
-        "description": "Shot-level AI video production with continuity across scenes."
+        "name": "Beauty",
+        "goal": "Product-accurate imagery across shades, angles, and formats.",
+        "workflow": "Product DNA locks exact product appearance; Image Studio generates consistent packaging and application shots.",
+        "studios": "Image, Video",
+        "deliverables": "Product stills, application video, social crops"
+      },
+      {
+        "name": "Product Advertising",
+        "goal": "A campaign that stays visually consistent across every format and platform.",
+        "workflow": "Brand DNA and Product DNA carry into every generated asset, from hero shots to platform-specific crops.",
+        "studios": "Image, Video, 3D",
+        "deliverables": "Hero imagery, platform video cuts, 3D product renders"
       },
       {
         "name": "Film",
-        "description": "Full movie projects — script to screen, one production timeline."
+        "goal": "A full film production carried from script to final export.",
+        "workflow": "Movie Project's full workflow — script, characters, shots, continuity, edit — in one connected timeline.",
+        "studios": "Image, Video, Voice, Music, 3D",
+        "deliverables": "Finished cut, score, localized versions"
       },
       {
-        "name": "Music",
-        "description": "Original score and sound design generated for the scene, not the loop."
+        "name": "Music Videos",
+        "goal": "Narrative and performance footage built to the track's own structure.",
+        "workflow": "Auto Director paces shots to the track; Auto Edit assembles video to the music's beat and structure.",
+        "studios": "Video, Music, 3D",
+        "deliverables": "Performance footage, narrative cutaways, final edit"
       },
       {
-        "name": "Voice",
-        "description": "Character-consistent AI voice across languages and takes."
+        "name": "Cartoons",
+        "goal": "Stylized characters and worlds kept consistent across every episode.",
+        "workflow": "Character DNA and Visual DNA hold a stylized look constant across scenes, seasons, and episodes.",
+        "studios": "Image, Video, Voice",
+        "deliverables": "Episode video, character voice, consistent visual style"
       },
       {
-        "name": "Script",
-        "description": "AI-assisted scriptwriting tied directly to characters and scenes."
+        "name": "YouTube",
+        "goal": "Recurring hosts, sets, and formats kept consistent at upload pace.",
+        "workflow": "Character and Visual DNA hold a host and set consistent across episodes without re-briefing each time.",
+        "studios": "Video, Voice",
+        "deliverables": "Episode cuts, thumbnails, consistent series look"
       },
       {
-        "name": "Characters",
-        "description": "Persistent characters carried across every scene and medium."
+        "name": "Architecture",
+        "goal": "Spatially accurate previsualization of a space before it's built or filmed.",
+        "workflow": "3D Studio builds the environment and camera paths; Image Studio renders it under the project's visual direction.",
+        "studios": "3D, Image",
+        "deliverables": "Previs renders, camera-path walkthroughs, stills"
       },
       {
-        "name": "Storyboard",
-        "description": "Auto-generated storyboards from script and visual direction."
+        "name": "Brand Campaigns",
+        "goal": "One brand identity carried across every asset in a campaign.",
+        "workflow": "Brand DNA and Visual DNA apply automatically to every generation, across every studio the campaign uses.",
+        "studios": "Image, Video, Music",
+        "deliverables": "Campaign imagery, video, and a consistent brand voice"
       },
       {
-        "name": "3D & Previs",
-        "description": "Environments and previsualization for spatial, physical scenes."
-      },
-      {
-        "name": "Auto Director",
-        "description": "AI direction that keeps shots, pacing, and coverage intentional."
-      },
-      {
-        "name": "Continuity AI",
-        "description": "Automatic continuity checking across characters, scenes, and takes."
-      },
-      {
-        "name": "Auto Editing",
-        "description": "Assembly-first editing that respects the project's direction."
+        "name": "Social Content",
+        "goal": "Short-form video produced from the same project direction, at scale.",
+        "workflow": "Auto Director and Auto Edit turn a project's existing direction into fast, consistent short-form cuts.",
+        "studios": "Video",
+        "deliverables": "Short-form cuts, platform-specific crops"
       }
-    ]
+    ],
+    "finalCta": {
+      "heading": "Find the workflow for your production",
+      "description": "Every use case runs on the same connected system — nothing to rebuild between projects."
+    }
   },
-  "footer": {
-    "brand": "Molecula",
-    "tagline": "AI Creative Production Operating System",
-    "rights": "© {year} Molecula. All rights reserved."
+  "templates": {
+    "meta": {
+      "title": "Templates",
+      "description": "Workflow blueprints for common productions — the production stages each one runs through, not fabricated thumbnails."
+    },
+    "hero": {
+      "eyebrow": "Workflow Blueprints",
+      "heading": "Proven production sequences, ready to start from",
+      "description": "Each blueprint is a real production sequence through Molecula's studios — the stages a project like it runs through, not a gallery of generated thumbnails."
+    },
+    "list": {
+      "eyebrow": "The Blueprints",
+      "heading": "Eight blueprints to start from"
+    },
+    "items": [
+      {
+        "name": "Luxury Product Campaign",
+        "description": "A campaign built around one product across hero imagery, lifestyle video, and platform crops.",
+        "stages": [
+          "Product DNA",
+          "Image Studio",
+          "Video Studio",
+          "Localization"
+        ]
+      },
+      {
+        "name": "Fashion Editorial",
+        "description": "Editorial stills and motion carrying one collection's visual direction.",
+        "stages": [
+          "Visual Direction",
+          "Image Studio",
+          "Retouch & Color",
+          "Export"
+        ]
+      },
+      {
+        "name": "Product Launch",
+        "description": "Consistent product imagery and video across every launch format.",
+        "stages": ["Product DNA", "Image Studio", "Video Studio", "Auto Edit"]
+      },
+      {
+        "name": "Cinematic Trailer",
+        "description": "A trailer cut assembled from a film project's existing shots and score.",
+        "stages": [
+          "Scene Builder",
+          "Auto Director",
+          "Music Studio",
+          "Auto Edit"
+        ]
+      },
+      {
+        "name": "Music Video",
+        "description": "Performance and narrative footage paced to the track's own structure.",
+        "stages": [
+          "Visual Direction",
+          "Video Studio",
+          "Auto Director",
+          "Auto Edit"
+        ]
+      },
+      {
+        "name": "YouTube Production",
+        "description": "A recurring episode format with a consistent host, set, and pacing.",
+        "stages": ["Character DNA", "Video Studio", "Voice Studio", "Auto Edit"]
+      },
+      {
+        "name": "Cartoon",
+        "description": "Stylized characters and worlds carried consistently across scenes.",
+        "stages": [
+          "Character DNA",
+          "Visual Direction",
+          "Image Studio",
+          "Video Studio"
+        ]
+      },
+      {
+        "name": "Brand Identity",
+        "description": "A brand's visual and sonic identity established once, then applied everywhere.",
+        "stages": ["Brand DNA", "Visual DNA", "Sound DNA", "Image Studio"]
+      }
+    ],
+    "finalCta": {
+      "heading": "Start a project from a blueprint",
+      "description": "Every blueprint runs on the same studios and DNA system as a project built from scratch."
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Molecula plans — from a free start to enterprise-scale production, all built on Universal Credits across every studio."
+    },
+    "hero": {
+      "eyebrow": "Pricing",
+      "heading": "One credit system. Every studio.",
+      "description": "Universal Credits work the same way across Image, Video, Music, Voice, and 3D — spend them wherever the project needs them."
+    },
+    "plansHeading": {
+      "eyebrow": "Plans",
+      "heading": "Choose the plan that fits your production"
+    },
+    "perMonth": "/ month",
+    "customPrice": "Custom",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "purpose": "Explore the platform and start a first project.",
+        "features": [
+          "Access to every studio",
+          "Universal Credits included",
+          "Community support"
+        ],
+        "cta": "Start Free"
+      },
+      "creator": {
+        "name": "Creator",
+        "purpose": "For individual creators producing regularly.",
+        "features": [
+          "Everything in Free",
+          "More Universal Credits",
+          "Priority generation queue"
+        ],
+        "cta": "Choose Creator"
+      },
+      "pro": {
+        "name": "Pro",
+        "purpose": "For professionals running full productions.",
+        "features": [
+          "Everything in Creator",
+          "Movie Project workflow",
+          "Continuity AI included"
+        ],
+        "cta": "Choose Pro"
+      },
+      "studio": {
+        "name": "Studio",
+        "purpose": "For teams producing multiple projects at once.",
+        "features": [
+          "Everything in Pro",
+          "Team collaboration",
+          "Highest Universal Credits tier"
+        ],
+        "cta": "Choose Studio"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "purpose": "For organizations with custom volume and security needs.",
+        "features": [
+          "Everything in Studio",
+          "Custom volume",
+          "Dedicated support"
+        ],
+        "cta": "See Security & Architecture"
+      }
+    },
+    "credits": {
+      "eyebrow": "Universal Credits",
+      "heading": "Spend the same credits everywhere",
+      "description": "Universal Credits apply across Image, Video, Music, Voice, and 3D generation — no separate balances to manage per studio.",
+      "studios": ["Image", "Video", "Music", "Voice", "3D"]
+    },
+    "finalCta": {
+      "heading": "Start producing today",
+      "description": "Every plan includes access to all five studios and the full DNA system."
+    }
+  },
+  "security": {
+    "meta": {
+      "title": "Security",
+      "description": "Molecula's current technical foundation and the production security architecture it's designed to grow into."
+    },
+    "hero": {
+      "eyebrow": "Security & Architecture",
+      "heading": "Built on a secure foundation, designed for production scale",
+      "description": "Below is a clear separation between what's implemented today and the production controls Molecula's architecture is designed for."
+    },
+    "foundation": {
+      "eyebrow": "Current Foundation",
+      "heading": "What's actually in place today",
+      "items": [
+        {
+          "title": "Validated environment configuration",
+          "description": "Environment variables are validated with Zod before any client is created, rather than trusted implicitly."
+        },
+        {
+          "title": "No secrets exposed to the client",
+          "description": "Server-only credentials never ship in client-side code or get committed to source control."
+        },
+        {
+          "title": "Server-first rendering",
+          "description": "Pages render as Server Components by default, in a strict-mode TypeScript codebase."
+        },
+        {
+          "title": "Supabase wired for server and browser",
+          "description": "Server and browser Supabase clients are in place, each built for its own request context."
+        }
+      ]
+    },
+    "planned": {
+      "eyebrow": "Production Roadmap",
+      "heading": "What the architecture is designed for",
+      "items": [
+        {
+          "title": "Row Level Security on every table",
+          "description": "Designed for RLS policies enforced on all Supabase tables handling project or account data."
+        },
+        {
+          "title": "Private, signed asset access",
+          "description": "Architecture plans for generated assets served through signed, time-limited URLs rather than public storage."
+        },
+        {
+          "title": "Team and workspace permissions",
+          "description": "Production roadmap includes role-based access for teams working on shared projects."
+        },
+        {
+          "title": "Voice consent and rights verification",
+          "description": "Designed for a consent and rights-verification step before any character voice can be cloned or reused."
+        },
+        {
+          "title": "Audit logging",
+          "description": "Architecture plans for an audit trail covering generation activity and account-level changes."
+        },
+        {
+          "title": "Secure generation workflows",
+          "description": "Production roadmap includes end-to-end secured upload, generation, and storage paths for project assets."
+        }
+      ]
+    },
+    "finalCta": {
+      "heading": "Questions about enterprise security?",
+      "description": "This page will grow alongside the production architecture it describes."
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Molecula's product philosophy — why AI creation is fragmented today, and what it means to preserve creative context across a project."
+    },
+    "hero": {
+      "eyebrow": "About Molecula",
+      "heading": "Idea to world, without losing the thread"
+    },
+    "philosophy": {
+      "eyebrow": "The Problem",
+      "statement": "AI creation is fragmented today.",
+      "body": "Every tool generates in isolation — a character that resets between images, a voice that drifts between takes, a scene that forgets what came before it. Molecula's goal is to preserve creative context, so a project stays one continuous thing from idea to finished world."
+    },
+    "statement": {
+      "eyebrow": "What that means",
+      "lines": [
+        "The image should know the character.",
+        "The video should know the scene.",
+        "The music should know the story.",
+        "The edit should know the film."
+      ]
+    },
+    "closing": {
+      "line": "IDEA → WORLD."
+    },
+    "finalCta": {
+      "heading": "Start with an idea",
+      "description": "See how Molecula carries it into a finished world."
+    }
   }
 }

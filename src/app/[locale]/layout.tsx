@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Cormorant_Garamond, Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 
+import { MarketingShell } from "@/components/marketing/marketing-shell";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { getLocaleDirection } from "@/i18n/locale-direction";
 import { routing } from "@/i18n/routing";
@@ -31,7 +32,10 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
-    title: t("title"),
+    title: {
+      default: t("title"),
+      template: `%s · ${t("brand")}`,
+    },
     description: t("description"),
   };
 }
@@ -63,7 +67,9 @@ export default async function LocaleLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <MarketingShell>{children}</MarketingShell>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
