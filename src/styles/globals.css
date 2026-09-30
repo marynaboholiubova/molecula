@@ -31,6 +31,12 @@
   --accent: oklch(80% 0.09 86);
   --accent-foreground: oklch(18% 0.02 70);
 
+  /* Richer, warmer than --accent — reserved for the gold atmosphere system
+     below (see the OPTIONAL ATMOSPHERE block). Deepened for visibility on
+     a light background. Never used for buttons/focus/selection — those
+     stay on --accent, untouched. */
+  --gold-atmosphere: oklch(62% 0.12 78);
+
   --success: oklch(64% 0.14 150);
   --warning: oklch(76% 0.13 80);
   --danger: oklch(56% 0.19 25);
@@ -61,6 +67,10 @@
   --accent: oklch(80% 0.09 86);
   --accent-foreground: oklch(16% 0.02 70);
 
+  /* Rich, warm yellow-gold — deliberately more saturated than --accent.
+     This is the one token the whole gold-atmosphere system reads from. */
+  --gold-atmosphere: oklch(78% 0.13 82);
+
   --success: oklch(70% 0.14 150);
   --warning: oklch(80% 0.12 80);
   --danger: oklch(63% 0.18 25);
@@ -87,6 +97,7 @@
 
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-gold-atmosphere: var(--gold-atmosphere);
 
   --color-success: var(--success);
   --color-warning: var(--warning);
@@ -122,6 +133,448 @@
   ::selection {
     background-color: var(--color-accent);
     color: var(--color-accent-foreground);
+  }
+}
+
+/*
+ * OPTIONAL ATMOSPHERE — warm-gold wave/particle field system.
+ *
+ * BASE THEME = the warm-black / graphite tokens and the two-layer glow in
+ * `AmbientGlow` above this block. That is the real design and must never
+ * depend on the rules below.
+ *
+ * Four purely additive, purely decorative intensity tiers, each one an
+ * organic "wave" of gold built from three depth layers (fine points, mid
+ * fragments, a couple of large soft bokeh) plus one broad ambient haze —
+ * all from the dedicated `--color-gold-atmosphere` token via `color-mix`.
+ * Fine points dominate every tier's layer count; bokeh is always the
+ * fewest and softest. Applied by `GoldAtmosphere`
+ * (`src/components/marketing/gold-atmosphere.tsx`), which every atmosphere
+ * in the site renders through — `AmbientGlow` (hero-style moments) and
+ * `Section` (ordinary content sections) both compose it, nothing else
+ * touches these classes directly. To fully revert to the base atmosphere,
+ * delete this block and `gold-atmosphere.tsx`'s one usage site in each of
+ * those two components.
+ *
+ * Composition: every tier shares one fixed wave shape (a gentle S-curve
+ * sitting in the lower half of its box, clear of centered titles and the
+ * home hero's upper-left headline), and `.gold-variant-*` classes reuse it
+ * via `transform` (rotate/flip/translate/scale) — GPU-cheap, and no
+ * coordinate list is ever duplicated for a variant. `nth-of-type` cycling
+ * gives repeated content sections the same variety automatically.
+ */
+.gold-wave {
+  position: absolute;
+  inset: 0;
+}
+
+.gold-wave--quiet {
+  background-image:
+    radial-gradient(
+      90% 70% at 50% 65%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 3%, transparent),
+      transparent 80%
+    ),
+    /* fine gold — sparse */
+    radial-gradient(
+        1px 1px at 10% 70%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 45%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      1px 1px at 30% 82%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 42%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 50% 74%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 48%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 70% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 42%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 90% 72%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 45%, transparent),
+      transparent 65%
+    ),
+    /* mid gold — a couple of fragments for texture */
+    radial-gradient(
+        2px 2px at 22% 66%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 32%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      2px 2px at 62% 80%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 30%, transparent),
+      transparent 65%
+    );
+}
+
+.gold-wave--standard {
+  background-image:
+    radial-gradient(
+      92% 72% at 50% 64%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 5%, transparent),
+      transparent 80%
+    ),
+    /* fine gold */
+    radial-gradient(
+        1px 1px at 6% 72%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 52%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      1px 1px at 18% 64%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 32% 80%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 54%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 46% 86%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 60% 76%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 52%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 74% 66%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 48%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 86% 78%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 96% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 46%, transparent),
+      transparent 65%
+    ),
+    /* mid gold */
+    radial-gradient(
+        2px 2px at 14% 62%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 38%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      2.5px 2.5px at 44% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 40%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2px 2px at 78% 68%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 36%, transparent),
+      transparent 65%
+    ),
+    /* soft bokeh — one, secondary */
+    radial-gradient(
+        16% 22% at 50% 78%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 9%, transparent),
+        transparent 78%
+      );
+}
+
+.gold-wave--featured {
+  background-image:
+    radial-gradient(
+      95% 75% at 50% 62%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 7%, transparent),
+      transparent 80%
+    ),
+    /* fine gold */
+    radial-gradient(
+        1px 1px at 4% 74%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 58%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      1px 1px at 12% 60%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 55%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 22% 66%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 60%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 32% 80%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 62%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 42% 86%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 58%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 52% 78%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 60%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 62% 64%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 56%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 72% 68%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 58%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 82% 78%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 60%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 92% 86%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 54%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 98% 76%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    /* mid gold */
+    radial-gradient(
+        2.5px 2.5px at 10% 64%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 46%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      2.5px 2.5px at 30% 72%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 48%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      3px 3px at 50% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2.5px 2.5px at 70% 74%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 46%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2px 2px at 90% 68%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 42%, transparent),
+      transparent 65%
+    ),
+    /* soft bokeh — secondary, two */
+    radial-gradient(
+        20% 26% at 30% 76%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 12%, transparent),
+        transparent 78%
+      ),
+    radial-gradient(
+      18% 24% at 72% 72%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 11%, transparent),
+      transparent 78%
+    );
+  mask-image: radial-gradient(94% 90% at 50% 55%, black, transparent);
+  -webkit-mask-image: radial-gradient(94% 90% at 50% 55%, black, transparent);
+}
+
+.gold-wave--hero {
+  background-image:
+    radial-gradient(
+      100% 80% at 50% 60%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 9%, transparent),
+      transparent 80%
+    ),
+    /* fine gold — the dominant layer, tracing the full wave */
+    radial-gradient(
+        1px 1px at 2% 78%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 68%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      1px 1px at 8% 66%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 65%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 14% 58%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 70%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 20% 62%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 72%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 27% 72%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 68%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 34% 82%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 74%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 41% 88%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 70%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 48% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 66%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 55% 74%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 72%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 62% 64%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 66%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 69% 60%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 64%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 76% 66%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 70%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 83% 76%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 66%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1.5px 1.5px at 90% 84%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 72%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 96% 88%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 66%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      1px 1px at 100% 80%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 60%, transparent),
+      transparent 65%
+    ),
+    /* mid gold — layered slightly off the fine line for depth */
+    radial-gradient(
+        2.5px 2.5px at 5% 70%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 52%, transparent),
+        transparent 65%
+      ),
+    radial-gradient(
+      3px 3px at 18% 60%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2.5px 2.5px at 32% 68%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 54%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      3px 3px at 46% 80%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 56%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2.5px 2.5px at 58% 86%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 52%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      3px 3px at 70% 78%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 50%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2.5px 2.5px at 82% 66%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 48%, transparent),
+      transparent 65%
+    ),
+    radial-gradient(
+      2px 2px at 94% 72%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 44%, transparent),
+      transparent 65%
+    ),
+    /* soft bokeh — secondary, exactly two, the largest layer in the stack */
+    radial-gradient(
+        24% 30% at 26% 74%,
+        color-mix(in oklch, var(--color-gold-atmosphere) 15%, transparent),
+        transparent 78%
+      ),
+    radial-gradient(
+      22% 28% at 70% 70%,
+      color-mix(in oklch, var(--color-gold-atmosphere) 14%, transparent),
+      transparent 78%
+    );
+  mask-image: radial-gradient(98% 94% at 50% 55%, black, transparent);
+  -webkit-mask-image: radial-gradient(98% 94% at 50% 55%, black, transparent);
+  animation: gold-breathe 18s ease-in-out infinite;
+}
+
+/* Compositional variants — reuse every tier's fixed wave shape via
+   transform only, so no coordinate list is ever duplicated. Used
+   explicitly on the few hero/featured moments per page; content sections
+   get variety automatically from the `nth-of-type` rules below instead. */
+.gold-variant-wave-diagonal {
+  transform: rotate(-13deg) scale(1.08);
+}
+
+.gold-variant-corner-right {
+  transform: translate(14%, -6%) rotate(6deg) scale(1.05);
+}
+
+.gold-variant-reverse {
+  transform: scaleX(-1);
+}
+
+.gold-variant-center-flow {
+  transform: translateY(-16%) scale(0.82);
+}
+
+/* Automatic variety for ordinary content sections: every `<Section>` on a
+   page is a direct child of `<main>`, so this reuses two of the variants
+   above as the page scrolls, with zero per-section props. */
+main > section:nth-of-type(3n + 2) .gold-wave--quiet,
+main > section:nth-of-type(3n + 2) .gold-wave--standard {
+  transform: rotate(-13deg) scale(1.08);
+}
+
+main > section:nth-of-type(3n + 3) .gold-wave--quiet,
+main > section:nth-of-type(3n + 3) .gold-wave--standard {
+  transform: scaleX(-1);
+}
+
+@keyframes gold-breathe {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

@@ -39,6 +39,7 @@ export default function SecurityPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        variant="center-flow"
       />
 
       <Section>

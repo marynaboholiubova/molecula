@@ -43,9 +43,9 @@
       "primaryCta": "Explore Molecula",
       "secondaryCta": "Discover Movie Project",
       "visual": {
-        "ariaLabel": "Molecula's connected production system: Idea at the center, linked to Image, Video, Film, Music, Voice, and 3D.",
+        "ariaLabel": "Molecula's connected production system: Idea at the center, linked to Image, Video, Presentation, Music, Voice, and 3D.",
         "center": "Idea",
-        "nodes": ["Image", "Video", "Film", "Music", "Voice", "3D"]
+        "nodes": ["Image", "Video", "Presentation", "Music", "Voice", "3D"]
       }
     },
     "positioning": {
@@ -70,7 +70,9 @@
             "Sound DNA"
           ]
         },
-        { "items": ["Image", "Video", "3D", "Voice", "Music"] },
+        {
+          "items": ["Image", "Video", "Music", "Voice", "3D", "Presentation"]
+        },
         { "items": ["Auto Director"], "emphasis": "accent" },
         { "items": ["Continuity AI"], "emphasis": "accent" },
         { "items": ["Auto Edit"], "emphasis": "accent" },
@@ -94,8 +96,8 @@
     },
     "connectedStudios": {
       "eyebrow": "Connected Studios",
-      "heading": "Five specialist studios. One shared creative brain.",
-      "description": "Image, Video, Music, Voice, and 3D each get a dedicated studio — but every one of them reads from the same project direction, characters, and continuity.",
+      "heading": "Six specialist studios. One shared creative brain.",
+      "description": "Image, Video, Music, Voice, 3D, and Presentation each get a dedicated studio — but every one of them reads from the same project direction, characters, and continuity.",
       "examples": [
         {
           "studio": "Image",
@@ -116,6 +118,10 @@
         {
           "studio": "3D",
           "example": "A previs environment reused as the lighting reference for the final shot."
+        },
+        {
+          "studio": "Presentation",
+          "example": "A pitch deck built from the project's own Brand DNA, not a generic template."
         }
       ]
     },
@@ -251,7 +257,8 @@
           { "name": "Video" },
           { "name": "Music" },
           { "name": "Voice" },
-          { "name": "3D" }
+          { "name": "3D" },
+          { "name": "Presentation" }
         ]
       },
       "direct": {
@@ -427,7 +434,7 @@
   "studios": {
     "meta": {
       "title": "Studios",
-      "description": "Five specialist AI studios — Image, Video, Music, Voice, and 3D — sharing one creative brain across every project."
+      "description": "Six specialist AI studios — Image, Video, Music, Voice, 3D, and Presentation — sharing one creative brain across every project."
     },
     "hero": {
       "eyebrow": "Specialist Studios",
@@ -501,6 +508,19 @@
           { "name": "Previs" },
           { "name": "Camera Paths" },
           { "name": "Scene Composition" }
+        ]
+      },
+      "presentation": {
+        "title": "Presentation Studio",
+        "description": "Direction-aware presentation design — decks and brand documents built from the project's own DNA, not a blank template.",
+        "items": [
+          { "name": "Slide Decks" },
+          { "name": "Pitch Decks" },
+          { "name": "One-Pagers" },
+          { "name": "Data Visuals" },
+          { "name": "Brand Templates" },
+          { "name": "Motion Slides" },
+          { "name": "Export Formats" }
         ]
       }
     },
@@ -700,7 +720,7 @@
     "hero": {
       "eyebrow": "Pricing",
       "heading": "One credit system. Every studio.",
-      "description": "Universal Credits work the same way across Image, Video, Music, Voice, and 3D — spend them wherever the project needs them."
+      "description": "Universal Credits work the same way across Image, Video, Music, Voice, 3D, and Presentation — spend them wherever the project needs them."
     },
     "plansHeading": {
       "eyebrow": "Plans",
@@ -763,8 +783,8 @@
     "credits": {
       "eyebrow": "Universal Credits",
       "heading": "Spend the same credits everywhere",
-      "description": "Universal Credits apply across Image, Video, Music, Voice, and 3D generation — no separate balances to manage per studio.",
-      "studios": ["Image", "Video", "Music", "Voice", "3D"]
+      "description": "Universal Credits apply across Image, Video, Music, Voice, 3D, and Presentation generation — no separate balances to manage per studio.",
+      "studios": ["Image", "Video", "Music", "Voice", "3D", "Presentation"]
     },
     "finalCta": {
       "heading": "Start producing today",

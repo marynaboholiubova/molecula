@@ -55,9 +55,11 @@ export default function MovieProjectPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        atmosphere="featured"
+        variant="wave-diagonal"
       />
 
-      <Section>
+      <Section atmosphere="standard">
         <Container size="wide">
           <SectionHeading
             eyebrow={t("flow.eyebrow")}
@@ -67,7 +69,7 @@ export default function MovieProjectPage() {
         </Container>
       </Section>
 
-      <Section>
+      <Section atmosphere="standard">
         <Container size="default">
           <SectionHeading
             eyebrow={t("workflow.eyebrow")}

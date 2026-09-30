@@ -22,7 +22,7 @@ export function ConnectedStudios() {
           description={t("description")}
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {examples.map((item) => (
             <div key={item.studio} className="bg-surface p-6">
               <h3 className="font-display text-lg font-semibold">

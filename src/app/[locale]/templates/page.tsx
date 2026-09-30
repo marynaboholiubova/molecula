@@ -40,6 +40,7 @@ export default function TemplatesPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        variant="wave-diagonal"
       />
 
       <Section>

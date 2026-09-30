@@ -47,6 +47,7 @@ export default function UseCasesPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        variant="corner-right"
       />
 
       <Section>

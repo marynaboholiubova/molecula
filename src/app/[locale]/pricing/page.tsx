@@ -32,9 +32,11 @@ export default function PricingPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        atmosphere="featured"
+        variant="corner-right"
       />
 
-      <Section>
+      <Section atmosphere="standard">
         <Container size="wide">
           <SectionHeading
             eyebrow={t("plansHeading.eyebrow")}
@@ -46,7 +48,7 @@ export default function PricingPage() {
         </Container>
       </Section>
 
-      <Section>
+      <Section atmosphere="standard">
         <Container size="default">
           <SectionHeading
             eyebrow={t("credits.eyebrow")}

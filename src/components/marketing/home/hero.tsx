@@ -18,7 +18,7 @@ export function Hero() {
       id="hero"
       className="relative isolate overflow-hidden px-6 pt-24 pb-20 sm:px-8 sm:pt-32 sm:pb-28 lg:px-12"
     >
-      <AmbientGlow />
+      <AmbientGlow intensity="hero" variant="wave-bottom" />
 
       <Container size="wide">
         <div className="grid items-center gap-16 lg:grid-cols-[3fr_2fr]">

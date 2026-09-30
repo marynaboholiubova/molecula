@@ -25,7 +25,14 @@ export async function generateMetadata({
   };
 }
 
-const STUDIO_KEYS = ["image", "video", "music", "voice", "threeD"] as const;
+const STUDIO_KEYS = [
+  "image",
+  "video",
+  "music",
+  "voice",
+  "threeD",
+  "presentation",
+] as const;
 
 export default function StudiosPage() {
   const t = useTranslations("studios");
@@ -37,6 +44,7 @@ export default function StudiosPage() {
         eyebrow={t("hero.eyebrow")}
         heading={t("hero.heading")}
         description={t("hero.description")}
+        variant="reverse"
       />
 
       <Section>

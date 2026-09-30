@@ -27,7 +27,7 @@ export function CallToAction({
 }: CallToActionProps) {
   return (
     <section className="relative isolate overflow-hidden border-t border-border/60 px-6 py-24 sm:px-8 sm:py-32 lg:px-12">
-      <AmbientGlow />
+      <AmbientGlow intensity="featured" />
       <div className="mx-auto max-w-3xl text-center">
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
         <h2 className="mt-4 font-display text-4xl leading-tight font-semibold text-balance sm:text-5xl">
