@@ -31,11 +31,13 @@
   --accent: oklch(80% 0.09 86);
   --accent-foreground: oklch(18% 0.02 70);
 
-  /* Richer, warmer than --accent — reserved for the gold atmosphere system
-     below (see the OPTIONAL ATMOSPHERE block). Deepened for visibility on
-     a light background. Never used for buttons/focus/selection — those
-     stay on --accent, untouched. */
-  --gold-atmosphere: oklch(62% 0.12 78);
+  /* Rich metallic gold (goldenrod family, ~#846400) — deliberately
+     darker and more saturated than --accent so it reads as luxurious
+     gold, not pale yellow or orange. Reserved for the gold atmosphere
+     system below (see the OPTIONAL ATMOSPHERE block); deepened further
+     for visibility on a light background. Never used for
+     buttons/focus/selection — those stay on --accent, untouched. */
+  --gold-atmosphere: oklch(52% 0.13 88);
 
   --success: oklch(64% 0.14 150);
   --warning: oklch(76% 0.13 80);
@@ -67,9 +69,11 @@
   --accent: oklch(80% 0.09 86);
   --accent-foreground: oklch(16% 0.02 70);
 
-  /* Rich, warm yellow-gold — deliberately more saturated than --accent.
-     This is the one token the whole gold-atmosphere system reads from. */
-  --gold-atmosphere: oklch(78% 0.13 82);
+  /* Rich metallic gold (goldenrod family, ~#c0992a) — deliberately
+     darker and more saturated than --accent so it reads as luxurious
+     gold against warm black, not pale yellow or orange. This is the one
+     token the whole gold-atmosphere system reads from. */
+  --gold-atmosphere: oklch(70% 0.13 88);
 
   --success: oklch(70% 0.14 150);
   --warning: oklch(80% 0.12 80);
